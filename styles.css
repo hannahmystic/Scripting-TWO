@@ -1,0 +1,290 @@
+*{box-sizing: border-box;}
+
+body{
+    background-color: #a4bfeb; 
+}
+
+
+h1, h2, h3, h6{
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: bold;
+}
+
+h1{
+    font-size: 3.06rem;
+    color: #802392;
+    /* h-shadow v-shadow blur-radius color */
+    text-shadow: .125rem .125rem 3px #1b1a22;
+}
+
+h2{
+    color: #802392;
+    font-size: 1.5rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h3{
+    color: #faf8fa;
+    font-size: 1.875rem;
+}
+
+p{
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+.menu{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+      
+    -webkit-flex-flow: row;
+    flex-flow: row;
+      
+    
+    width: 94vw;
+    border-radius: .8125rem;
+    background-color: #faf8fa;
+    margin: 0 auto;
+}
+
+    .hamburgermenu{
+        width: 2rem;
+        height: 2rem;
+        margin: 1.125rem;
+    }
+        .hamburgermenu img{
+            max-width: 100%;
+            display: inline;
+        }
+
+    .recipehop{
+        width: 13.7rem;
+
+    }
+
+
+
+.container{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+  
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    
+    margin:0 auto;
+    width: 84.3vw;
+}
+
+.prev img{ 
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.prev{
+    background-color: #faf8fa;
+    border-radius: .35rem;
+    padding: .375rem;
+    /* width: 8.5625rem;
+    height: 8.5625rem; */
+    width: 30vw;
+    height: 30vw;
+    margin: 2.7vw;
+    position: relative;
+}
+
+.prevLabel{
+    background-color: #faf8fa;
+    opacity: .65;
+    margin: 0;
+    position: absolute;
+    top: 6.0rem;
+    height: 2.5rem;
+    left:0;
+    width: 100%;
+}
+
+.browse{
+    background-color: #3e8989;
+    border-radius: .625rem;
+}
+
+.search{
+    border: 3px solid #3e8989;
+}
+
+#tablet{
+    display: none;
+}
+
+@media screen and (min-width: 600px){
+    /*Proportion for Feat: Length is 2.284 x the hieght */
+    #tablet{
+        display: block;
+    }
+    #mobile{
+        display: none;
+    }
+    img{
+        max-width: 100%;
+        height: auto;
+    }
+
+    header{
+        margin: 0;
+        border: 0;
+        padding: 0;
+        width: 100vw;
+        height: auto;
+    }
+
+
+    #h1tab{
+        margin: 0 auto;
+        position: absolute;
+        top: 25vw;
+        left: 22.526vw;
+        bottom: 0;
+        width: 54.3vw;
+        height: 11.2vw;
+    }
+    h1{
+        text-align: center;
+        color: black;
+        font-size: 9.375vw;
+        opacity: .85;
+        margin: 0;
+    }
+
+    .teal{
+        margin: 3.5rem auto 1.375rem auto;
+        border-radius: .625rem;
+        background-color: #3e8989;
+        width: 38.31vw;
+        height: 7.1615vw;
+        padding-top: 1vw;
+    }
+
+    h2{
+        text-align: center;
+        color: #faf8fa;
+        font-size: 4vw;
+    }
+
+    .featured{
+        width: 81.12vw;
+        height: 28.385vw;
+        padding: 0;
+        margin: 0 auto;
+        border: 0;
+    }
+
+    .feat{
+        border-radius: .375rem;
+        padding: .375rem;
+        margin: 0;
+        width: 38.41vw;
+        height: 100%;
+        background-color: #faf8fa;
+    }
+    #feat1{ float: left; }
+    #feat2{ float: right; }
+
+    h6{
+        text-align: left;
+        width: 100%;
+        color: #011d26;
+        font-size: 1.25rem;
+        margin: 0;
+        border: 0;
+        padding: 0;
+    }
+
+    p{
+        font-size: 2.3vw;
+        color: #011d26;
+        margin: 0;
+        border: 0;
+        padding: 0;
+        line-height: 1.3125rem;
+    }
+
+    .browseTablet{
+        background-color: #3e8989;
+        border-radius: .625rem;
+        width: 81.5vw;
+        height: 37.76vw;
+        margin: 0 auto;
+
+    }
+    
+    .browseTop{
+        width: 76.82vw;
+        height: 7.16vw;
+        margin: 3vw 2vw 0 2vw;
+        padding-top: 1vw;
+    }
+
+    .bbc{
+        width: 38.4vw;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        float: left;
+    }
+    .bbc h2{
+        text-align: left;
+        margin: 0 auto;
+        padding: 0;
+        border: 0;
+    }
+    .searchBar{
+        width: 32.4vw;
+        float: right;
+        padding-top: 1vw;
+    }
+
+    h3{
+        color: #011d26;
+        font-size: 3.125vw;
+        text-decoration: underline;
+        font-weight: bold;
+        text-align: left;
+        margin: .625rem;
+    }
+
+    .cats{
+        background-color: #faf8fa;
+        height: 29.1667vw;
+        margin: 1vw;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+      
+        -webkit-flex-flow: row;
+        flex-flow: row;
+        justify-content: space-around;
+    }
+
+    .catColumn{
+        width: 23.177;
+        padding: 0;
+        margin: 0;
+        border: 0;
+    }
+
+    ul{
+        margin: 0 0 0 1.25;
+        -webkit-padding-start: 0;
+        -webkit-margin-before: 0;
+        -webkit-margin-after: 0;
+    }
+}
