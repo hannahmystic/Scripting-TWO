@@ -119,13 +119,200 @@ p{
     border: 3px solid #3e8989;
 }
 
-#tablet{
+#bigger{
     display: none;
 }
+/*
+ _______________________________
+|                               |
+|        MOBILE RECIPE          |
+|_______________________________|
+*/
+.recTitle, .recPicture, .ingredients, .recStepBox{
+    background-color: #faf8fa;
+    border-radius: .75rem;
+    padding: 4vw;
+    margin: 3.25vw 3.25vw 0 3.25vw;
+}
 
+.recTitle{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+}
+.logo{
+    width: 8.67vw;
+    height: 90%;
+    margin-right: .75rem;
+}
+.logo img{
+    width: 100%;
+    height: auto;
+    margin: 0;
+}
+#recTitle, #recSubtitle{
+    color: #011d26;
+    width: 70vw;
+}
+#recTitle{
+    font-size: 8vw;
+    line-height: 8vw;
+    text-shadow: none;
+    margin: 0;
+}
+#recSubtitle{
+    font-size: 4.878vw;
+    font-style: italic;
+    text-align: left;
+    margin: 0;
+}
+
+.recPicture img, .recStepBox img{
+    width: 85vw;
+    height: auto;
+    margin: 0 auto;
+}
+
+#ingTeal{
+    width: 85vw;
+}
+#ingredientList{
+    /* list-style-type: none; */
+    font-size: 1.125rem;
+    line-height: 1.875rem;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: bold;
+    width: 85vw;
+}
+
+.recStep p{
+    color: black;
+    font-size: 1rem;
+    line-height: 1.875rem;
+    width: 85vw;
+}
+
+#browseRecMobile{
+    text-align: center;
+    padding: 4vw;
+    margin: 3.25vw;
+}
+#browseRecMobile h3{
+    margin: 0;
+}
+.search{
+    width: 92vw;
+    margin: 0 auto;
+}
+
+
+/*
+ _______________________________
+|                               |
+|           TABLET              |
+|_______________________________|
+*/
 @media screen and (min-width: 600px){
+
+    /*
+ _______________________________
+|                               |
+|        TABLET RECIPE          |
+|_______________________________|
+*/
+    .recTitle, .recIntro, .recStepBox{
+        width: 90.625vw;
+        padding: 1rem;
+    }
+    .logo{
+        width: 10vw;
+    }
+    #recTitle{
+        font-size: 2.25rem;
+        width: 71.6vw;
+        text-align: left;
+    }
+    #recSubtitle{
+        font-size: 1.5rem;
+        width: 71.6vw;
+        margin-left: 11vw;
+    }
+
+    .recIntro{
+        background-color: #faf8fa;
+        margin: 3.25vw 3.25vw 0 3.25vw;
+        border-radius: .75rem;
+
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-flow: row wrap;
+        flex-flow: row wrap;
+    }
+    .recPicture{
+        padding: 0;
+        margin: 0;
+        width: 39.97vw;
+    }
+    .recPicture img{
+        margin: 0;
+        width: 100%;
+        height: auto;
+    }
+    .ingredients{
+        margin: 0 1rem 1rem 1rem;
+        padding: 0;
+        width: 42.18vw;
+    }
+    #ingTeal{
+        padding: 0;
+        margin: 0;
+        width:42vw;
+    }
+    #ingredientList{
+        width: 40vw;
+        margin-top: 1.125rem;
+        margin-left: 1.5rem;
+    }
+
+    .onTheBottom{
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-flow: row wrap;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        
+        margin: 3.25vw auto;
+        width: 90.625vw;
+    }
+    #browseRecMobile{
+        width: 35vw;
+        color: #faf8fa;
+        padding: 0;
+        text-decoration: none;
+        margin: 0;
+    }
+    #browseRecMobile h3{
+        color: #faf8fa;
+        text-decoration: none;
+    }
+    .search{
+        width: 35vw;
+        margin: 0;
+    }
+
+
     /*Proportion for Feat: Length is 2.284 x the hieght */
-    #tablet{
+    #bigger{
         display: block;
     }
     #mobile{
@@ -136,13 +323,14 @@ p{
         height: auto;
     }
 
-    header{
+    #tabHeader{
         margin: 0;
         border: 0;
         padding: 0;
         width: 100vw;
         height: auto;
     }
+    #deskHeader{ display: none; }
 
 
     #h1tab{
@@ -195,6 +383,8 @@ p{
     }
     #feat1{ float: left; }
     #feat2{ float: right; }
+    #feat3{ display: none; }
+    #feat4{ display: none; }
 
     h6{
         text-align: left;
@@ -215,7 +405,7 @@ p{
         line-height: 1.3125rem;
     }
 
-    .browseTablet{
+    .browseBigger{
         background-color: #3e8989;
         border-radius: .625rem;
         width: 81.5vw;
@@ -280,11 +470,271 @@ p{
         margin: 0;
         border: 0;
     }
+    #catColumn4{ display: none; }
 
     ul{
-        margin: 0 0 0 1.25;
+        margin: 0 0 0 1.25rem;
         -webkit-padding-start: 0;
         -webkit-margin-before: 0;
         -webkit-margin-after: 0;
     }
+}
+
+/*
+ _______________________________
+|                               |
+|           DESKTOP             |
+|_______________________________|
+*/
+@media screen and (min-width: 1200px){
+
+    /*
+     _______________________________
+    |                               |
+    |       DESKTOP RECIPE          |
+    |_______________________________|
+    */
+    .recIntro{
+        grid-area: lefty;
+        background-color: none;
+        width: 20rem;
+        margin: 0;
+        display: block;
+    }
+    .recTitle{
+        grid-area: recTitle;
+        width: 48.3rem;
+        margin: 0;
+    }
+    #recTitle{
+        line-height: 3rem;
+        margin-top: 1rem;}
+    .allSteps{
+        grid-area: steps;
+        max-width: 48.3rem;
+    }
+    .recStepBox{
+        max-width: 100%;
+        margin: 0;
+        margin-top: 2.25rem;
+    }
+    .recStep{
+        max-width: 100%;
+    }
+    .logo{ display: none;}
+    .onTheBottom{ display: none; }
+
+    #recipePage{
+        margin: 2rem auto;
+        width: 80.0625rem;
+        display: grid;
+        grid-gap: 2.25rem;
+
+        grid-template-columns: 21rem 48.3rem;
+        grid-template-rows: 4rem 6.375rem auto;
+        grid-template-areas:
+        "header header"
+        "lefty recTitle"
+        "lefty steps";
+
+        justify-content: center;
+    }
+
+    .recPicture{
+        width: 20rem;
+        height: 20rem;
+        padding: 0;
+        max-width: 100%;
+    }
+
+    .ingredients{
+        width: 19rem;
+        padding: 0;
+        margin: 0;
+    }
+    #ingTeal{
+        display: block;
+        width: 18.5rem;
+        height: 3.375rem;
+    }
+    .search{
+        width: 13.7rem;
+    }
+    p{ max-width: 100%; }
+
+
+
+    /*
+     _______________________________
+    |                               |
+    |       DESKTOP HOME PAGE       |
+    |_______________________________|
+    */
+    #catColumn4{ display: block; }
+    #tabletSearch{ display: none; }
+    .teal{ display: none; }
+    #tabHeader{ display: none; }
+
+    #deskHeader{
+        display: block;
+        grid-area: header;
+    }
+
+    .featured{
+        width: 39rem;
+        height: 29.375rem;
+        grid-area: featured;
+
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+      
+        -webkit-flex-flow: row wrap;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-content: space-between;
+    }
+    .feat{ margin: 0; }
+    #feat3{ display: block; }
+    #feat4{ display: block; }
+
+
+
+    #bigger{
+        
+        width: 80.0625rem;
+        margin-top: 2rem;
+
+        display: grid;
+        grid-template-columns: 29.375rem 39rem;
+        grid-template-rows: 14.5rem 29rem;
+        grid-template-areas:
+          "header header"
+          "browse featured";
+
+        grid-gap: 1.625rem;
+        justify-content: center;
+    }
+
+    /*----  MENU BAR DETAILS  ----*/
+
+    .topBar{
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+          
+        -webkit-flex-flow: row;
+        flex-flow: row;
+
+        height: 4rem;
+    }
+
+    #deskHeader{
+        background-color: #faf8fa;
+    }
+    h1{
+        font-size: 3.789rem;
+        width:19.375rem;
+        color: #802392;
+        margin: 0;
+        margin-top: -.5rem;
+        padding: 0;
+        border: 0;
+        opacity: 1;
+        z-index: 2;
+    }
+    #logo{
+        width:5.25rem;
+        height:5.25rem;
+        max-width: 100%;
+        margin-left: -1.75rem;
+        margin-top: -.5rem;
+        z-index: 1;
+    }
+    h4{
+        margin: 1rem 1rem 3rem 0;
+        height: 2.75rem;
+        font-size: 1.5rem;
+        color: #3e8989;
+    }
+    #allRecipies{ width: 10rem; }
+    #browseByCategory{ width: 16.625rem; }
+    .searchBar{
+        width: 13.75rem; height: 1.875rem;
+        margin-top: .25rem;
+    }
+
+    .widePic{
+        width: 70.3125rem;
+        padding: 0;
+        z-index: -1;
+    }
+    .widePic img{
+        max-width: 98%;
+        height: 10.1875rem;
+        padding: 0;
+        margin: 0 auto;
+    }
+
+
+    h2{
+        font-size: 2rem;
+        width: 18.75rem;
+    }
+    h3{
+        font-size: 1.5rem;
+    }
+    p{ 
+        font-size: 1.125rem;
+    }
+    .catColumn{
+        width: 11.875rem;
+        height: 11.875rem;
+    }
+
+    .cats{
+        -webkit-flex-flow: wrap;
+        flex-flow: wrap;
+    }
+    
+    .feat{
+        width: 18.5rem;
+        height: 13.5rem;
+    }
+    .feat img{
+        width: 17.6875rem;
+        height: auto;
+        margin: 0 auto;
+        padding: 0;
+        border: .375rem 0 0 0;
+    }
+
+    .browseBigger{
+        grid-area: browse;
+        width: 29.375rem;
+        height: 29.625rem;
+    }
+    .browseTop{
+        height: 3.4375rem;
+        margin: 0;
+        padding: 0;
+    }
+    .bbc{
+        width: 17.5rem;
+        margin-left: 1.625rem;
+        padding: .5rem 0;
+    }
+    .cats{
+        width: 28.7rem;
+        height: 25.625rem;
+        margin: 0 auto;
+    }
+
+    /* div{
+        max-width: 100%;
+    } */
 }

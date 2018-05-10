@@ -14,6 +14,12 @@
     initial-scale=1.0">
 </head>
 
+
+
+<!--________________________________
+   |                                |
+   |        MOBILE HOME PAGE        |  
+   |________________________________|-->
 <body>
 
     <div id="mobile">
@@ -76,11 +82,37 @@
     </div>
 
 
-    <div id="tablet">
-        <header>
+<!--________________________________
+   |                                |
+   |   TABLET & DESKTOP HOME PAGE   |  
+   |________________________________|-->
+
+    <div id="bigger">
+        <header id="tabHeader">
             <img src="icons/banner2.png" alt="banner">
             <div id="h1tab">
                 <h1>RECIPE HOP</h1>
+            </div>
+        </header>
+
+        <header id="deskHeader">
+            <div class="topBar">
+                <img id="logo" src="icons/logo.png" alt="logo">
+                <h1>Recipe Hop</h1>
+                <h4 id="allRecipes">All Recipes</h4>
+                <h4 id="browseByCategory"> Browse by Category</h4>
+                <div class="searchBar">
+                    <form action="home.html" method="post" id="myForm" name="myForm">
+                        <div class="search">
+                            <label for="search"></label>
+                            <input type="text" id="search" name="search" placeholder="Search recipes">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="widePic">
+                <img src="icons/bannerDesktop.png" alt="banner">
             </div>
         </header>
 
@@ -102,16 +134,30 @@
                 <h6>Seared Steaks and Garlic Butter</h6>
                 <p>with oven fries</p>
             </div>
+
+            <div class="feat" id="feat3">
+                <img src="icons/feat3.png" alt="Pasta">
+
+                <h6>Roasted Red Pepper Pasta</h6>
+                <p>with lemon-parmesan broccoli</p>
+            </div>
+
+            <div class="feat" id="feat4">
+                <img src="icons/feat4.png" alt="Lettuce">
+
+                <h6>Togarashi Chicken Lettuce Cups</h6>
+                <p>with orange and radishes</p>
+            </div>
         </div>
 
-        <div class="browseTablet">
+        <div class="browseBigger">
             
             <div class="browseTop">
                 <div class="bbc">
                     <h2>Browse by Category</h2>
                 </div>
                     
-                <div class="searchBar">
+                <div class="searchBar" id="tabletSearch">
                     <form action="home.html" method="post" id="myForm" name="myForm">
                         <div class="search">
                             <label for="search"></label>
@@ -123,7 +169,7 @@
 
 
             <div class="cats">
-                <div class="catColumn">
+                <div class="catColumn" id="catColumn1">
                     <h3>Meal Tags</h3>
                     <ul>
                         <li>Healthy</li>
@@ -134,7 +180,7 @@
                         <li>Easy Peasy</li>
                     </ul>
                 </div>
-                <div class="catColumn">
+                <div class="catColumn" id="catColumn2">
                     <h3>Ingredients</h3>
                     <ul>
                         <li>Sprinkles</li>
@@ -145,7 +191,7 @@
                     </ul>
                     <p>View All</p>
                 </div>
-                <div class="catColumn">
+                <div class="catColumn" id="catColumn3">
                     <h3>Types of Food</h3>
                     <ul>
                         <li>Pasta</li>
@@ -153,6 +199,17 @@
                         <li>Meat</li>
                         <li>Seafood</li>
                         <li>Bread</li>
+                    </ul>
+                    <p>View All</p>
+                </div>
+                <div class="catColumn" id="catColumn4">
+                    <h3>Ingredients</h3>
+                    <ul>
+                        <li>Sprinkles</li>
+                        <li>Candy</li>
+                        <li>Candy Canes</li>
+                        <li>Candy Corn</li>
+                        <li>Syrup</li>
                     </ul>
                     <p>View All</p>
                 </div>
