@@ -5,7 +5,7 @@ body{
 }
 
 
-h1, h2, h3, h6{
+h1, h2, h3, h4, h6{
     font-family: 'Open Sans Condensed', sans-serif;
     font-weight: bold;
 }
@@ -15,6 +15,8 @@ h1{
     color: #802392;
     /* h-shadow v-shadow blur-radius color */
     text-shadow: .125rem .125rem 3px #1b1a22;
+    height: 16.62vw;
+    margin: 0;
 }
 
 h2{
@@ -29,10 +31,21 @@ h3{
     font-size: 1.875rem;
 }
 
+h4{
+    color: #1b1a22;
+    font-size: 1.125rem;
+    text-align: left;
+    line-height: 1.25rem;
+}
+
 p{
     font-family: 'Open Sans', sans-serif;
 }
 
+.search{
+    width: 100%;
+    height: 100%;
+}
 
 .menu{
     display: -webkit-box;
@@ -65,7 +78,6 @@ p{
         width: 13.7rem;
 
     }
-
 
 
 .container{
@@ -115,7 +127,7 @@ p{
     border-radius: .625rem;
 }
 
-.search{
+.homeSearch{
     border: 3px solid #3e8989;
 }
 
@@ -145,14 +157,19 @@ p{
     flex-flow: row wrap;
 }
 .logo{
-    width: 8.67vw;
-    height: 90%;
-    margin-right: .75rem;
+    width: 12vw;
+    height: auto;
+    margin: 4.3vw .75rem;
+    /* margin-right: .75rem;
+    margin-top: 4.3vw; */
 }
 .logo img{
     width: 100%;
     height: auto;
     margin: 0;
+}
+#logoRecPage{
+    margin: 0 .75rem 0 0;
 }
 #recTitle, #recSubtitle{
     color: #011d26;
@@ -204,10 +221,78 @@ p{
 #browseRecMobile h3{
     margin: 0;
 }
-.search{
+.recSearch{
     width: 92vw;
     margin: 0 auto;
 }
+
+/*
+ _______________________________
+|                               |
+|        MOBILE BROWSE          |
+|_______________________________|
+*/
+.browseOptions, #mobileHeader, .item{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+}
+
+.browseOptions{
+    /* width: 76.15vw; */
+    margin: 0 auto;
+    /*Flexbox*/
+    justify-content: center;
+}
+#browseSearch{
+    width: 76.15vw;
+}
+.item{
+    background-color: #faf8fa;
+    border-radius: .375rem;
+    padding: 1.6vw;
+    margin: 3.5vw auto 0 auto;
+    width: 94vw;
+}
+.item img{
+    width: 15.45vw;
+    height: 15.45vw;
+}
+.itemText{
+    width: 72vw;
+    margin: 1.6vw;
+}
+.itemText h4{
+    margin: 0;
+}
+.itemText p{
+    margin: .3rem 0 0 0;
+}
+.littleTeal{
+    width: 36vw;
+    height: 9.5vw;
+    margin: 1.9vw;
+    border-radius: .625rem;
+    background-color: #3e8989;
+}
+.littleTeal h3{
+    margin: 0 auto;
+    font-size: 6.5vw;
+    text-align: center;
+}
+#mobileHeader{
+    /*Flexbox*/
+    width: 94vw;
+    margin: 2.75vw auto 0 auto;
+    height: 21.1vw;
+    border-radius: .75rem;
+    background-color: #faf8fa;
+}
+#tabHeader, .deskHeader, .webSort{ display: none;}
 
 
 /*
@@ -218,12 +303,11 @@ p{
 */
 @media screen and (min-width: 600px){
 
-    /*
- _______________________________
-|                               |
-|        TABLET RECIPE          |
-|_______________________________|
-*/
+    /*_______________________________
+    |                               |
+    |        TABLET RECIPE          |
+    |_______________________________|
+    */
     .recTitle, .recIntro, .recStepBox{
         width: 90.625vw;
         padding: 1rem;
@@ -305,12 +389,61 @@ p{
         color: #faf8fa;
         text-decoration: none;
     }
-    .search{
+    .recSearch{
         width: 35vw;
         margin: 0;
     }
 
+    /*______________________________.
+    |                               |
+    |         TABLET BROWSE         |
+    |_______________________________|
+    */
+    h4{
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+    #browseOptions{
+        margin-top: 3.385vw;
+        align-items: center;
+        align-content: center;
+    }
+    #browseSearch{
+        width: 25.13vw;
+        height: 5.7vw;
+        border: 3px solid #3e8989;
+        border-radius: .625rem;
+        margin: 1.9vw;
+    }
+    .item{
+        width: 88.67vw;
+        padding: .375rem;
+        margin: 3vw auto 0
+    }
+    .itemText{
+        width: 65vw;
+    }
+    .littleTeal{
+        width: 25.13vw;
+        height: 6.5vw;
+    }
+    .littleTeal h3{
+        font-size: 4.5vw;
+        color: #faf8fa;
+        text-decoration: none;
+        text-align: center;
+    }
+    #mobileHeader{ display:none;}
+    #tabHeader{ display: block;}
 
+
+
+
+    /*______________________________.
+    |                               |
+    |       TABLET HOME PAGE        |
+    |_______________________________|
+    */
     /*Proportion for Feat: Length is 2.284 x the hieght */
     #bigger{
         display: block;
@@ -330,7 +463,7 @@ p{
         width: 100vw;
         height: auto;
     }
-    #deskHeader{ display: none; }
+    .deskHeader{ display: none; }
 
 
     #h1tab{
@@ -508,7 +641,7 @@ p{
     }
     #recTitle{
         line-height: 3rem;
-        margin-top: 1rem;}
+        margin-top: 0;}
     .allSteps{
         grid-area: steps;
         max-width: 48.3rem;
@@ -516,7 +649,7 @@ p{
     .recStepBox{
         max-width: 100%;
         margin: 0;
-        margin-top: 2.25rem;
+        margin-bottom: 2.25rem;
     }
     .recStep{
         max-width: 100%;
@@ -557,10 +690,75 @@ p{
         width: 18.5rem;
         height: 3.375rem;
     }
-    .search{
+    .recSearch{
         width: 13.7rem;
     }
     p{ max-width: 100%; }
+
+
+    /*_______________________________
+    |                               |
+    |       DESKTOP BROWSE          |
+    |_______________________________|
+    */
+    #tabHeader, .browseOptions{ display: none; }
+    .deskHeader, .webSort{ display: block; }
+    #deskHeaderBrowse{
+        margin: 2rem auto 0 auto;
+        width: 71.0625rem;
+    }
+    .item{
+        width: 18.4375rem;
+        padding: .375rem;
+        margin: 1.75rem .5625rem 0 .5625rem;
+    }
+    .item img{
+        width: 100%;
+    }
+    .itemText{
+        width: 100%;
+    }
+    .itemText h4{
+        color: #011d26;
+        font-size: 1.25rem;
+        line-height: 1.4rem;
+    }
+    .itemText p{
+        font-size: 1.125rem;
+    }
+    .list{
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+      
+        -webkit-flex-flow: row wrap;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+
+        width: 71.6rem;
+        margin: 0 auto;
+    }
+    .littleTeal{
+        width: 100%;
+        height: 3.3125rem;
+        margin: 0;
+    }
+    .littleTeal h3{
+        font-size: 3rem;
+    }
+    .webSort{
+        background-color: #3e8989;
+        width: 12.3125rem;
+        border-radius: .625rem;
+        margin-top: 1.75rem;
+        margin-right: .5625rem;
+    }
+    .filterList{
+        background-color: #faf8fa;
+        margin: .3125rem;
+    }
 
 
 
@@ -575,7 +773,7 @@ p{
     .teal{ display: none; }
     #tabHeader{ display: none; }
 
-    #deskHeader{
+    .deskHeader{
         display: block;
         grid-area: header;
     }
@@ -605,7 +803,7 @@ p{
     #bigger{
         
         width: 80.0625rem;
-        margin-top: 2rem;
+        margin: 2rem auto 0 auto;
 
         display: grid;
         grid-template-columns: 29.375rem 39rem;
@@ -633,7 +831,7 @@ p{
         height: 4rem;
     }
 
-    #deskHeader{
+    .deskHeader{
         background-color: #faf8fa;
     }
     h1{
@@ -658,7 +856,7 @@ p{
     h4{
         margin: 1rem 1rem 3rem 0;
         height: 2.75rem;
-        font-size: 1.5rem;
+        font-size: 2rem;
         color: #3e8989;
     }
     #allRecipies{ width: 10rem; }
@@ -669,15 +867,16 @@ p{
     }
 
     .widePic{
-        width: 70.3125rem;
+        width: 100%;
         padding: 0;
         z-index: -1;
+        margin: 0 auto;
     }
     .widePic img{
-        max-width: 98%;
+        max-width: 99%;
         height: 10.1875rem;
         padding: 0;
-        margin: 0 auto;
+        margin: 0 .5% 0 .5%;
     }
 
 

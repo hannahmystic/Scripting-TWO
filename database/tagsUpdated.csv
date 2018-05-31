@@ -1,0 +1,114 @@
+id,foreignkey,tag
+,1,easy
+,1,full of flavor
+,1,fruit
+,2,comfort food
+,2,fancy
+,2,stovetop
+,3,vegetarian
+,3,easy
+,3,cold
+,4,cheesy 
+,4,oven
+,4,vegetarian
+,5,vegetarian
+,5,comfort food
+,5,easy
+,6,vegetarian
+,6,full of flavor
+,6,stovetop
+,7,cheesy 
+,7,vegetarian
+,7,oven
+,8,cold
+,8,easy
+,8,comfort food
+,9,asian
+,9,stir fry
+,9,full of flavor
+,10,asian
+,10,stovetop
+,10,full of flavor
+,11,vegetables
+,11,full of flavor
+,11,seafood
+,12,cheesy 
+,12,oven
+,12,vegetarian
+,13,vegetarian
+,13,easy
+,13,mexican
+,14,cheesy 
+,14,full of flavor
+,14,easy
+,15,burger
+,15,cheesy 
+,15,comfort food
+,16,mexican
+,16,full of flavor
+,16,roast
+,17,vegetarian
+,17,vegetables
+,17,roast
+,18,vegetarian
+,18,vegetables
+,18,roast
+,19,vegetarian
+,19,vegetables
+,19,roast
+,20,full of flavor
+,20,vegetables
+,20,roast
+,21,roast
+,21,fancy
+,21,vegetables
+,22,pasta
+,22,vegetables
+,22,vegetarian
+,23,stew
+,23,asian
+,23,roast
+,24,vegetables
+,24,roast
+,24,full of flavor
+,25,sweet
+,25,vegetabes
+,25,seafood
+,26,sweet
+,26,full of flavor
+,26,oven
+,26,comfort food
+,27,oven
+,27,steak
+,27,salad
+,28,oven
+,28,asian
+,28,burger
+,29,spicy
+,29,pasta
+,29,seafood
+,30,vegetarian
+,30,cheesy
+,30,pizza
+,31,salad
+,31,southwest
+,31,spicy
+,32,stovetop
+,32,spicy
+,32,asian
+,33,asian
+,33,sweet
+,33,vegetarian
+,33,stir fry
+,34,spicy
+,34,stir fry
+,34,asian
+,35,healthy
+,35,fancy
+,35,seafood
+,36,spicy
+,36,stir fry
+,36,asian
+,37,stew
+,37,comfort food
+,37,stovetop

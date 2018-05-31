@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Recipe Hop</title>
+    <!--Maybe make the title the name of the recipe?-->
+	<title>Recipe</title>
 	<meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
@@ -14,7 +15,7 @@
 </head>
 <body id="recipePage">
 
-    <header id="deskHeader">
+    <header class="deskHeader">
         <div class="topBar">
             <img id="logo" src="icons/logo.png" alt="logo">
             <h1>Recipe Hop</h1>
@@ -32,7 +33,7 @@
     </header>
 
     <div class="recTitle">
-        <div class="logo">
+        <div class="logo" id="logoRecPage">
             <img src="icons/logo.png" alt="logo">
         </div>
         <h1 id="recTitle">Broccoli and Basil Pesto Sandwiches</h1>
@@ -93,7 +94,7 @@
             <h3>Browse all recipes by category</h3>
         </div>
 
-        <div class="search">
+        <div class="recSearch">
             <form action="home.html" method="post" id="myForm" name="myForm">
                 <div class="search">
                     <label for="search"></label>

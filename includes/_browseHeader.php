@@ -78,48 +78,12 @@
             <div class="filterList">
                 <h3>Meal Tags</h3>
                 <ul>
-                    <li>Healthy</li>
-                    <li>Comfort Food</li>
                     <li>Full of Flavor</li>
-                    <li>Stovetop</li>
+                    <li>Vegetarian</li>
+                    <li>Roast</li>
                     <li>Oven</li>
-                    <li>Easy Peasy</li>
+                    <li>Easy</li>
+                    <li>Cheesy</li>
                 </ul>
             </div>       
         </div>
-
-        <div class="item">
-            <img src="tempImages/breakfast.png" alt="image">
-            <div class="itemText">
-                <h4>Beef Medallions and Mushroom Sauce</h4>
-                <p>with mashed potatos</p>
-            </div>
-        </div>
-
-        <div class="item">
-            <img src="tempImages/breakfast.png" alt="image">
-            <div class="itemText">
-                <h4>Top Chef Ginger-Marinated Grassfed Steaks</h4>
-                <p>with mashed potatos</p>
-            </div>
-        </div>
-
-        <div class="item">
-            <img src="tempImages/breakfast.png" alt="image">
-            <div class="itemText">
-                <h4>Thai Curry Chicken</h4>
-                <p>with carrots and bok choy</p>
-            </div>
-        </div>
-
-        <div class="item">
-            <img src="tempImages/breakfast.png" alt="image">
-            <div class="itemText">
-                <h4>Shrimp Fra Diavolo</h4>
-                <p>with lumaca rigata pasta</p>
-            </div>
-        </div>      
-
-    </div>
-
-</body>
