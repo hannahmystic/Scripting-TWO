@@ -19,23 +19,29 @@
             <img src="icons/logo.png" alt="logo">
         </div>
         <div class="recipehop">
-            <h1>Recipe Hop</h1>
+            <a href="index.php">
+                <h1>Recipe Hop</h1>
+            </a>
         </div>
     </header>
 
     <header id="tabHeader">
         <img src="icons/banner2.png" alt="banner">
         <div id="h1tab">
-            <h1>RECIPE HOP</h1>
+            <a href="index.php">
+             <h1>RECIPE HOP</h1>
+            </a>
         </div>
     </header>
 
     <header class="deskHeader" id="deskHeaderBrowse">
         <div class="topBar">
-            <img id="logo" src="icons/logo.png" alt="logo">
-            <h1>Recipe Hop</h1>
-            <h4 id="allRecipes">All Recipes</h4>
-            <h4 id="browseByCategory"> Browse by Category</h4>
+                <img id="logo" src="icons/logo.png" alt="logo">
+            <a href="index.php">
+                <h1>Recipe Hop</h1>
+            </a>
+            <a href="browse.php"><h4 id="allRecipes">All Recipes</h4></a>
+            <a href="browse.php"><h4 id="browseByCategory"> Browse by Category</h4></a>
             <div class="searchBar">
                 <form action="home.html" method="post" id="myForm" name="myForm">
                     <div class="search">
