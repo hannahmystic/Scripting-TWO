@@ -1,7 +1,7 @@
 
     <div class="onTheBottom">
         <div class="browse" id="browseRecMobile">
-            <h3>Browse all recipes by category</h3>
+            <a href="browse.php"><h3>Browse all recipes by category</h3></a>
         </div>
 
         <div class="recSearch">

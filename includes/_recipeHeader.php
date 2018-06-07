@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!--Maybe make the title the name of the recipe?-->
 	<title><?php $recipeTitle ?></title>
 	<meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
@@ -18,9 +17,9 @@
     <header class="deskHeader">
         <div class="topBar">
             <img id="logo" src="icons/logo.png" alt="logo">
-            <h1>Recipe Hop</h1>
-            <h4 id="allRecipes">All Recipes</h4>
-            <h4 id="browseByCategory"> Browse by Category</h4>
+            <a href="index.php"><h1>Recipe Hop</h1></a>
+            <a href="browse.php"><h4 id="allRecipes">All Recipes</h4></a>
+            <a href="browse.php"><h4 id="browseByCategory"> Browse by Category</h4></a>
             <div class="searchBar">
                 <form action="home.html" method="post" id="myForm" name="myForm">
                     <div class="search">

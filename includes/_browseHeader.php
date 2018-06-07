@@ -84,12 +84,12 @@
             <div class="filterList">
                 <h3>Meal Tags</h3>
                 <ul>
-                    <li>Full of Flavor</li>
-                    <li>Vegetarian</li>
-                    <li>Roast</li>
-                    <li>Oven</li>
-                    <li>Easy</li>
-                    <li>Cheesy</li>
+                    <a href="browse.php?tag=full+of+flavor"><li>Full of Flavor</li></a>
+                    <a href="browse.php?tag=vegetarian"><li>Vegetarian</li></a>
+                    <a href="browse.php?tag=roast"><li>Roast</li></a>
+                    <a href="browse.php?tag=oven"><li>Oven</li></a>
+                    <a href="browse.php?tag=easy"><li>Easy</li></a>
+                    <a href="browse.php?tag=cheesy"><li>Cheesy</li></a>
                 </ul>
             </div>       
         </div>
