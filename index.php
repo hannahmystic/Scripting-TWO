@@ -73,10 +73,11 @@
         </div>
 
         <div class="homeSearch">
-            <form action="home.html" method="post" id="myForm" name="myForm">
+         <form name="searchForm" method="POST" action="search.php">
                 <div class="search">
-                    <label for="search"></label>
+                    <label for="search"> </label>
                     <input type="text" id="search" name="search" placeholder="Search recipes">
+                    <input type="submit" name="submit" value="Go!">
                 </div>
             </form>
         </div>
@@ -126,28 +127,28 @@
             <div class="feat" id="feat1">
                 <img src="icons/feat1.png" alt="calzone">
 
-                <h6>Broccoli and Mozzerella Calzones</h6>
+                <a href="recipe.php?rec=6"><h6>Broccoli and Mozzerella Calzones</h6></a>
                 <p>with stir-fried vegetables and wonton noodles</p>
             </div>
 
             <div class="feat" id="feat2">
                 <img src="icons/feat2.png" alt="Steak">
 
-                <h6>Seared Steaks and Garlic Butter</h6>
+                <a href="recipe.php?rec=29"><h6>Seared Steaks and Garlic Butter</h6></a>
                 <p>with oven fries</p>
             </div>
 
             <div class="feat" id="feat3">
                 <img src="icons/feat3.png" alt="Pasta">
 
-                <h6>Roasted Red Pepper Pasta</h6>
+                <a href="recipe.php?rec=24"><h6>Roasted Red Pepper Pasta</h6></a>
                 <p>with lemon-parmesan broccoli</p>
             </div>
 
             <div class="feat" id="feat4">
                 <img src="icons/feat4.png" alt="Lettuce">
 
-                <h6>Togarashi Chicken Lettuce Cups</h6>
+                <a href="recipe.php?rec=36"><h6>Togarashi Chicken Lettuce Cups</h6></a>
                 <p>with orange and radishes</p>
             </div>
         </div>
@@ -174,12 +175,12 @@
                 <div class="catColumn" id="catColumn1">
                     <h3>Meal Tags</h3>
                     <ul>
-                        <li>Healthy</li>
-                        <li>Comfort Food</li>
-                        <li>Full of Flavor</li>
-                        <li>Stovetop</li>
-                        <li>Oven</li>
-                        <li>Easy Peasy</li>
+                        <a href="browse.php?tag=healthy"><li>Healthy</li></a>
+                        <a href="browse.php?tag=comfort+food"><li>Comfort Food</li></a>
+                        <a href="browse.php?tag=full+of+flavor"><li>Full of Flavor</li></a>
+                        <a href="browse.php?tag=stovetop"><li>Stovetop</li></a>
+                        <a href="browse.php?tag=oven"><li>Oven</li></a>
+                        <a href="browse.php?tag=easy"><li>Easy Peasy</li></a>
                     </ul>
                 </div>
                 <div class="catColumn" id="catColumn2">

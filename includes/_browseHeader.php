@@ -66,10 +66,11 @@
             <h3>Sort By</h3>
         </div>
         <div class="search" id="browseSearch">
-            <form action="home.html" method="post" id="myForm" name="myForm">
+        <form name="searchForm" method="POST" action="search.php">
                 <div class="search">
-                    <label for="search"></label>
+                    <label for="search"> </label>
                     <input type="text" id="search" name="search" placeholder="Search recipes">
+                    <input type="submit" name="submit" value="Go!">
                 </div>
             </form>
         </div>
