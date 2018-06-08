@@ -8,7 +8,7 @@
 <?php
 
 $table = "main";
-$query = "SELECT * FROM {$table}";
+$query = "SELECT * FROM $table";
 $result = mysqli_query($connection, $query);
 
 
@@ -17,9 +17,6 @@ if (!$result) {
 }
 
 
-// $tag = isset($_GET['tag']) ? $_GET['tag'] : null;
-
-// while($row = mysqli_fetch_assoc($result)) {
 
 if (!(isset($_GET['tag']))){
   while($row = mysqli_fetch_assoc($result)) {
@@ -45,28 +42,35 @@ else {
   $safe_tag = mysqli_real_escape_string($connection, $tag);
 
   $tagtable = "tags";
-  $tagquery = "SELECT * FROM {$tagtable} WHERE 'tag'= {$tag}";
+  $tagquery = "SELECT * FROM $tagtable WHERE 'tag' = '{$tag}'";
   $tagresult = mysqli_query($connection, $tagquery);
-
   if (!$tagresult) {
     die("Database query failed."); 
   }
 
-  while($row = mysqli_fetch_assoc($tagresult)) {
+  $recipes = NULL;
+
+  while($row = mysqli_fetch_assoc($tagresult)){
     $num = $row['foreignkey'];
+    $recipes .= "SELECT * FROM $table WHERE id=$num";
+  }
+  
 
-    $title= mysql_query( "SELECT 'title' FROM $table WHERE 'id'={$num}");
-    $subtitle= mysql_query( "SELECT 'subtitle' FROM $table WHERE 'id'={$num}");
-    $image= mysql_query( "SELECT 'recipe_img' FROM $table WHERE 'id'={$num}");
+  $recipesresult = mysqli_query($connection, $recipes);
+  if (!$recipesresult) {
+    die("Recipes query failed."); 
+  }
+
+
+  while($row = mysqli_fetch_assoc($recipesresult)) {
     ?>
-
       <div class="item">
-        <div class="itembg" style="background-image: url(assets/images/mainimages/<?php echo $image ?>.jpg)"></div>
+        <div class="itembg" style="background-image: url(assets/images/mainimages/<?php echo $row['recipe_img'] ?>.jpg)"></div>
        
         <div class="itemText">
-          <a href="recipe.php?rec=<?php echo $num ?>">
-            <h4><?php echo $title ?></h4>
-          <p><?php echo $subtitle ?></p>
+          <a href="recipe.php?rec=<?php echo $row['id'] ?>">
+            <h4><?php echo $row['title'] ?></h4>
+          <p><?php echo $row['subtitle'] ?></p>
         </div>
       </div>
 
