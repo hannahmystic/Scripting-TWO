@@ -13,7 +13,7 @@ $result = mysqli_query($connection, $query);
 
 
 if (!$result) {
-  die("Database query failed.");
+  die("Main database query failed.");
 }
 
 
@@ -45,16 +45,20 @@ else {
   $tagquery = "SELECT * FROM $tagtable WHERE 'tag' = '{$tag}'";
   $tagresult = mysqli_query($connection, $tagquery);
   if (!$tagresult) {
-    die("Database query failed."); 
+    die("Tag database query failed."); 
   }
 
-  $recipes = NULL;
+  // echo $tagquery;
+  // echo $tagresult;
+  $recipes = [];
 
   while($row = mysqli_fetch_assoc($tagresult)){
-    $num = $row['foreignkey'];
-    $recipes .= "SELECT * FROM $table WHERE id=$num";
+     $num = $row['foreignkey'];
+  $recipes += "SELECT * FROM $table WHERE 'id'=$num";
   }
-  
+  echo $recipes;
+  if(!isset($recipes))
+  {echo "Something went wrong";}
 
   $recipesresult = mysqli_query($connection, $recipes);
   if (!$recipesresult) {
@@ -62,7 +66,7 @@ else {
   }
 
 
-  while($row = mysqli_fetch_assoc($recipesresult)) {
+  while($row = mysqli_fetch_assoc($recipes)) {
     ?>
       <div class="item">
         <div class="itembg" style="background-image: url(assets/images/mainimages/<?php echo $row['recipe_img'] ?>.jpg)"></div>
