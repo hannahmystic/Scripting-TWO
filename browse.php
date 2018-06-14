@@ -42,31 +42,42 @@ else {
   $safe_tag = mysqli_real_escape_string($connection, $tag);
 
   $tagtable = "tags";
-  $tagquery = "SELECT * FROM $tagtable WHERE 'tag' = '{$tag}'";
+  // 1. $tagquery = "SELECT * FROM $tagtable WHERE 'tag' = '{$tag}'";
+  // 2. $tagquery = "SELCET 'foreignkey' FROM $tagtable WHERE 'tag' = '{$tag}'";
+  //    Note that in the above, the next while loop would be skipped. This would ideally make the array.
+  // 3. 
+  $tagquery = "SELECT * FROM $tagtable";
+  // ???
   $tagresult = mysqli_query($connection, $tagquery);
   if (!$tagresult) {
     die("Tag database query failed."); 
   }
 
-  // echo $tagquery;
-  // echo $tagresult;
-  $recipes = [];
-
-  while($row = mysqli_fetch_assoc($tagresult)){
-     $num = $row['foreignkey'];
-  $recipes += "SELECT * FROM $table WHERE 'id'=$num";
-  }
-  echo $recipes;
-  if(!isset($recipes))
-  {echo "Something went wrong";}
-
-  $recipesresult = mysqli_query($connection, $recipes);
-  if (!$recipesresult) {
-    die("Recipes query failed."); 
+  // * * * *  NEW  * * * *
+  $tagkeys = [];
+  while($row = mysqli_fetch_assoc($tagresult))
+  {
+    if($row['tag'] == $tag){
+      array_push($tagkeys, $row['foreignkey']);
+    }
   }
 
+  //$recipes = [];
+  $recipeQuery = [];
+  foreach( $tagkeys as $value){
+  $recipeQuery += "SELECT 'title', 'subtitle', 'recipe_img' FROM $table WHERE 'id'='{$value}'";
+  }
+  $recipeResult = mysqli_query($connection, $recipeQuery);
+  if (!$recipeResult) {
+    die("Recipe query failed."); 
+  }
+  echo $recipeQuery;
+  echo $recipeResult;
+  echo "Hi hannah";
 
-  while($row = mysqli_fetch_assoc($recipes)) {
+
+
+  while($row = mysqli_fetch_assoc($recipeQuery)) {
     ?>
       <div class="item">
         <div class="itembg" style="background-image: url(assets/images/mainimages/<?php echo $row['recipe_img'] ?>.jpg)"></div>
