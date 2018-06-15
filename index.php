@@ -175,7 +175,7 @@
                 <div class="catColumn" id="catColumn1">
                     <h3>Meal Tags</h3>
                     <ul>
-                        <a href="browse.php?tag=healthy"><li>Healthy</li></a>
+                        <a href="browse.php?alt=vegetarian"><li>Vegetarian</li></a>
                         <a href="browse.php?tag=comfort+food"><li>Comfort Food</li></a>
                         <a href="browse.php?tag=full+of+flavor"><li>Full of Flavor</li></a>
                         <a href="browse.php?tag=stovetop"><li>Stovetop</li></a>
@@ -186,35 +186,32 @@
                 <div class="catColumn" id="catColumn2">
                     <h3>Ingredients</h3>
                     <ul>
-                        <li>Sprinkles</li>
-                        <li>Candy</li>
-                        <li>Candy Canes</li>
-                        <li>Candy Corn</li>
-                        <li>Syrup</li>
+                        <a href="search.php?alt=potato"><li>Potatoes</li></a>
+                        <a href="search.php?alt=broccoli"><li>Broccoli</li></a>
+                        <a href="search.php?alt=garlic"><li>Garlic</li></a>
+                        <a href="search.php?alt=tomato"><li>Tomatos</li></a>
+                        <a href="search.php?alt=rice"><li>Rice</li></a>
                     </ul>
-                    <p>View All</p>
                 </div>
                 <div class="catColumn" id="catColumn3">
                     <h3>Types of Food</h3>
                     <ul>
-                        <li>Pasta</li>
-                        <li>Salad</li>
-                        <li>Meat</li>
-                        <li>Seafood</li>
-                        <li>Bread</li>
+                        <a href="search.php?alt=pasta"><li>Pasta</li></a>
+                        <a href="search.php?alt=salad"><li>Salad</li></a>
+                        <a href="search.php?alt=meat"><li>Meat</li></a>
+                        <a href="browse.php?tag=seafood"><li>Seafood</li></a>
+                        <a href="search.php?alt=chicken"><li>Chicken</li></a>
                     </ul>
-                    <p>View All</p>
                 </div>
                 <div class="catColumn" id="catColumn4">
-                    <h3>Ingredients</h3>
+                    <h3>More Tags</h3>
                     <ul>
-                        <li>Sprinkles</li>
-                        <li>Candy</li>
-                        <li>Candy Canes</li>
-                        <li>Candy Corn</li>
-                        <li>Syrup</li>
+                        <a href="browse.php?tag=asian"><li>Asian</li></a>
+                        <a href="browse.php?tag=roast"><li>Roast</li></a>
+                        <a href="browse.php?tag=vegetables"><li>Vegetables</li></a>
+                        <a href="browse.php?tag=spicy"><li>Spicy</li></a>
+                        <a href="browse.php?tag=stir+fry"><li>Stir Fry</li></a>
                     </ul>
-                    <p>View All</p>
                 </div>
             </div>
 

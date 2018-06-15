@@ -283,14 +283,18 @@ p{
 .itemText p{
     margin: .3rem 0 0 0;
 }
-.littleTeal{
+.littleTeal, .dropdown{
     width: 36vw;
     height: 9.5vw;
     margin: 1.9vw;
     border-radius: .625rem;
     background-color: #3e8989;
 }
-.littleTeal h3{
+.littleTeal{
+    position: relative;
+    display: inline-block;
+}
+.littleTeal h3, .dropdown h3{
     margin: 0 auto;
     font-size: 6.5vw;
     text-align: center;
@@ -305,6 +309,17 @@ p{
 }
 #tabHeader, .deskHeader, .webSort{ display: none;}
 
+.dropdown:hover{
+    display: block;
+}
+#tagDrop, #ingDrop{
+    position: absolute;
+    display: none;
+    background-color: #faf8fa;
+}
+#tagDrop a:hover, #ingDrop a:hover{
+    background-color: #a4bfeb;
+}
 
 /*
  _______________________________
@@ -434,11 +449,11 @@ p{
     .itemText{
         width: 65vw;
     }
-    .littleTeal{
+    .littleTeal, .dropdown{
         width: 25.13vw;
         height: 6.5vw;
     }
-    .littleTeal h3{
+    .littleTeal h3, .dropdown h3{
         font-size: 4.5vw;
         color: #faf8fa;
         text-decoration: none;
@@ -755,16 +770,16 @@ p{
         width: 71.6rem;
         margin: 0 auto;
     }
-    .littleTeal{
+    .littleTeal, .dropdown{
         width: 100%;
         height: 3.3125rem;
         margin: 0;
     }
-    .littleTeal h3{
+    .littleTeal h3, .dropdown h3{
         font-size: 3rem;
     }
     .webSort{
-        background-color: #3e8989;
+        background-color: #37cfcf;
         width: 18.4375rem;
         border-radius: .625rem;
         margin-top: 1.75rem;

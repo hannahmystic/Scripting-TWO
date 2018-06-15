@@ -2,19 +2,23 @@
   include "includes/data.php";
   include "includes/_recipeHeader.php";
   
-
+/* Make sure recipe was called, get id.
+    Recipes are called with their id number,
+    in the form recipe.php?rec=# */
  if (isset($_GET['rec'])) {
     $id = $_GET['rec']; }
     $safe_rec = mysqli_real_escape_string($connection, $id);
 
+/* Initializes main database*/
 $main = "main"; 
- $mainquery= "SELECT * FROM $main WHERE id=$id";
+$mainquery= "SELECT * FROM $main WHERE id=$id";
 $mainresult = mysqli_query($connection, $mainquery);
 
 if (!$mainresult) {
     die ("Database main query failed.");
 }
 
+/* Main database info used for recipe introduction */
 while ($row = mysqli_fetch_assoc($mainresult)){
 ?>
 
@@ -32,6 +36,7 @@ while ($row = mysqli_fetch_assoc($mainresult)){
         <img src="assets/images/mainimages/<?php echo $row['recipe_img'] ?>.jpg" alt="the food">
     </div>
 
+    <!-- Initializes ingredients database-->
     <?php
     }  
         $ing = "ingredients"; 
@@ -61,7 +66,7 @@ while ($row = mysqli_fetch_assoc($mainresult)){
 
 
 <?php
-     
+    /* Initializes directions database */
     $dir = "directions"; 
     $dirquery= "SELECT * FROM $dir WHERE foreignkey=$id";
     $dirresult = mysqli_query($connection, $dirquery);
@@ -71,6 +76,7 @@ while ($row = mysqli_fetch_assoc($mainresult)){
     }
 ?>
 
+<!-- Makes a div for each step -->
 <div class="allSteps">
 
     <?php while ($row = mysqli_fetch_assoc($dirresult)){ ?>

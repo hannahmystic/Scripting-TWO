@@ -9,6 +9,7 @@
 
 $table = "main";
 
+/* Setup for general browse page (no tag filter) */
 if (!(isset($_GET['tag']))){
 
   $query = "SELECT * FROM $table";
@@ -18,10 +19,12 @@ if (!(isset($_GET['tag']))){
   }
 }
 
+/* Setup for browse page filtered by tag */
 else{
   $tag = $_GET['tag'];
   $safe_tag = mysqli_real_escape_string($connection, $tag);
 
+  /* Get the id of each tag that matches*/
   $tagtable = "tags";
   $tagquery = "SELECT * FROM $tagtable WHERE tag='{$tag}'";
   $tagresult = mysqli_query($connection, $tagquery);
@@ -30,12 +33,14 @@ else{
   }
 
   // * * * *  NEW  * * * *
+  /* Put all the id's of corresponding recipes in an array */
   $tagkeys = [];
   while($row = mysqli_fetch_assoc($tagresult))
   {
     array_push($tagkeys, $row['foreignkey']);
   }
 
+   /* Controls for the issue that each recipe's id was shifted by two (recipe 1 became recipe 3, etc. */
   foreach($tagkeys as $value){ $value+=2; }
   $numkeys = count($tagkeys);
   $result = [];
@@ -51,6 +56,7 @@ else{
       for($i=1; $i<count($tagkeys); $i++ ){
         $result .= " OR id=$tagkeys[$i]";
       }
+      /* returns a result that ends in "WHERE id=1 OR id=2 OR id=3" etc. */
     }
   // echo $result;
   $result = mysqli_query($connection, $result);
@@ -63,7 +69,7 @@ else{
 ?>
 
 
-
+<!-- Builds the page with the selected recipes-->
 <?php
   while($row = mysqli_fetch_assoc($result)) {
     ?>

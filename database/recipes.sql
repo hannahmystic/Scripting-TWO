@@ -874,8 +874,6 @@ CREATE TABLE `main` (
 --
 
 INSERT INTO `main` (`id`, `title`, `subtitle`, `description`, `recipe_img`, `ingredients_img`) VALUES
-(1, 'title', 'subtitle', 'description', 'recipe_img', 'ingredients_img'),
-(2, 'title', 'subtitle', 'description', 'recipe_img', 'ingredients_img'),
 (3, 'Ancho-Orange Chicken', 'With Kale Rice & Rosted Carrots', 'We\'re amping up chicken breasts with a glaze\'f smoky ancho chile paste and fresh\'range juice in this recipe.\'n the side, roasted carrots and lightly creamy, golden raisin-studded rice perfectly accent the sweetness\'f the glaze.', '0101_FPP_Chicken-Rice_97338_WEB_SQ_hi_res', '0101_ING_FPP_large_feature'),
 (4, 'Beef Medallions & Mushroom Sauce', 'With Mashed Potatoes', 'In this easy recipe, inspired by steak Diane (an American restaurant classic), we\'re searing beef medallions, then using the fond in the pan to make a rich, bright mushroom sauce for spooning\'n top. Garlic mashed potatoes and sautéed kale make for delicious, simple sides.', '0101_2PM_Steak-Diane_97315_SQ_hi_res', 'ING_1-1_2PM_large_feature'),
 (5, 'Broccoli & Basil Pesto Sandwiches', 'with Romaine & Citrus Salad', 'These Italian focaccia sandwiches are layered with broccoli, three cheeses, and a savory basil, cashew, and pine nut pesto, then baked in the\'ven to meld all the bright, aromatic flavors.\'n the side, we\'re serving a refreshing salad\'f romaine and seasonal clementine, dressed in a creamy dressing made with fresh clementine juice.', '1225_FPV_Pesto_-Broccoli-Sandwich_74916_WEB_SQ_hi_res', '1225_ING_FPV_large_feature'),

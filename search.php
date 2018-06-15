@@ -2,12 +2,20 @@
   include "includes/data.php";
   include "includes/_browseHeader.php";
 
+  /* Opening section sets search term variable. 
+    For some links on the home page, I redirect here with "alt to get results more comprehensive than the tags.*/
+  if(isset($_GET['alt'])){
+    $searchTerm = $_GET['alt'];
+  }
+  elseif(isset($_POST['search'])){
+    $searchTerm = $_POST['search'];
+  }
   if (!isset($_POST['search'])) {
     header("Location:index.php");
   }
 
-  $searchTerm = $_POST['search'];
 
+  /* Database variables */
   $main = "main";
   $ingredients = "ingredients";
   $tags = "tags";
@@ -22,6 +30,7 @@
   $extra2 = mysqli_query($connection, $extra2q);
   $extra3 = mysqli_query($connection, $extra3q);
   
+  /* Make an array with the id of every recipe containing the search term */
   $allKeys = [];
   while($row = mysqli_fetch_assoc($mainResults)){
     array_push($allKeys, $row['id']);
@@ -42,6 +51,7 @@
     }
   }  
 
+  /* Controls for the issue that each recipe's id was shifted by two (recipe 1 became recipe 3, etc. */
   foreach($allKeys as $value){ $value+=2; }
 
   $numkeys = count($allKeys);
@@ -58,7 +68,8 @@
       $result .= " OR id=$allKeys[$i]";
     }
   }
-    //echo $result;
+  /* The above code returns a result that ends in "WHERE id=1 OR id=2 OR id=3" etc.*/
+  //echo $result;
   $result = mysqli_query($connection, $result);
   if (!$result) {
     die("Search query failed."); 
@@ -70,6 +81,7 @@
 
 <?php 
 
+/* Build the page*/
 while($row=mysqli_fetch_assoc($result)){
 ?>
   <div class="item">

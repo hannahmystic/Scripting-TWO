@@ -42,7 +42,7 @@
             </a>
             <a href="browse.php"><h4 id="allRecipes">All Recipes</h4></a>
             <a href="browse.php"><h4 id="browseByCategory"> Browse by Category</h4></a>
-            <div class="searchBar">
+            <div class="searchBar"> <!-- Sends search term to search page  -->
                 <form action="search.php" method="post" id="myForm" name="myForm">
                     <div class="search">
                         <label for="search"></label>
@@ -59,11 +59,30 @@
 
 
     <div class="browseOptions">
-        <div class="littleTeal">
-            <h3>Filter</h3>
+        <div class="drop">
+            <button class="dropdown" onclick="dropFunction()">
+            <h3>Filter Tags</h3>
+            </button>
+            <div id="tagDrop">
+                <a href="browse.php?alt=vegetarian">Vegetarian</a>
+                <a href="browse.php?tag=comfort+food">Comfort Food</a>
+                <a href="browse.php?tag=full+of+flavor">Full of Flavor</a>
+                <a href="browse.php?tag=stovetop">Stovetop</a>
+                <a href="browse.php?tag=oven">Oven</a>
+                <a href="browse.php?tag=easy"><li>Easy Peasy</a>
+            </div>
         </div>
-        <div class="littleTeal">
-            <h3>Sort By</h3>
+        <div class="drop">
+            <button class="dropdown" onclick="dropIng()">
+                <h3>Ingredients</h3>
+            </button>
+            <div id="ingDrop">
+                <a href="search.php?alt=potato">Potatoes</a>
+                <a href="search.php?alt=broccoli">Broccoli</a>
+                <a href="search.php?alt=garlic">Garlic</a>
+                <a href="search.php?alt=tomato">Tomatos</a>
+                <a href="search.php?alt=rice">Rice</a>
+            </div>
         </div>
         <div class="search" id="browseSearch">
         <form name="searchForm" method="POST" action="search.php">
