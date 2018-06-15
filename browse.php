@@ -8,46 +8,22 @@
 <?php
 
 $table = "main";
-$query = "SELECT * FROM $table";
-$result = mysqli_query($connection, $query);
-
-
-if (!$result) {
-  die("Main database query failed.");
-}
-
-
 
 if (!(isset($_GET['tag']))){
-  while($row = mysqli_fetch_assoc($result)) {
-  ?>
 
-    <div class="item">
-      <div class="itembg" style="background-image: url(assets/images/mainimages/<?php echo $row['recipe_img'] ?>.jpg)"></div>
-       
-      <div class="itemText">
-        <a href="recipe.php?rec=<?php echo $row['id']?>">
-          <h4><?php echo $row['title'] ?></h4>
-        </a>
-        <p><?php echo $row['subtitle'] ?></p>
-      </div>
-    </div>
-    
-  <?php
+  $query = "SELECT * FROM $table";
+  $result = mysqli_query($connection, $query);
+  if (!$result) {
+    die("Main database query failed.");
   }
 }
 
-else {
+else{
   $tag = $_GET['tag'];
   $safe_tag = mysqli_real_escape_string($connection, $tag);
 
   $tagtable = "tags";
-  // 1. $tagquery = "SELECT * FROM $tagtable WHERE 'tag' = '{$tag}'";
-  // 2. $tagquery = "SELCET 'foreignkey' FROM $tagtable WHERE 'tag' = '{$tag}'";
-  //    Note that in the above, the next while loop would be skipped. This would ideally make the array.
-  // 3. 
-  $tagquery = "SELECT * FROM $tagtable";
-  // ???
+  $tagquery = "SELECT * FROM $tagtable WHERE tag='{$tag}'";
   $tagresult = mysqli_query($connection, $tagquery);
   if (!$tagresult) {
     die("Tag database query failed."); 
@@ -57,41 +33,54 @@ else {
   $tagkeys = [];
   while($row = mysqli_fetch_assoc($tagresult))
   {
-    if($row['tag'] == $tag){
-      array_push($tagkeys, $row['foreignkey']);
-    }
+    array_push($tagkeys, $row['foreignkey']);
   }
 
-  //$recipes = [];
-  $recipeQuery = [];
-  foreach( $tagkeys as $value){
-  $recipeQuery += "SELECT 'title', 'subtitle', 'recipe_img' FROM $table WHERE 'id'='{$value}'";
+  foreach($tagkeys as $value){ $value+=2; }
+  $numkeys = count($tagkeys);
+  $result = [];
+
+  if($numkeys == 0){
+    echo "Sorry! There were no results for $tag. Try searching a different term.";
   }
-  $recipeResult = mysqli_query($connection, $recipeQuery);
-  if (!$recipeResult) {
+  else if($numkeys == 1){
+    $result = "SELECT * FROM $table WHERE id=$tagkeys[0]";
+  }
+  else{
+    $result = "SELECT * FROM $table WHERE id=$tagkeys[0]";
+      for($i=1; $i<count($tagkeys); $i++ ){
+        $result .= " OR id=$tagkeys[$i]";
+      }
+    }
+  // echo $result;
+  $result = mysqli_query($connection, $result);
+  if (!$result) {
     die("Recipe query failed."); 
   }
-  echo $recipeQuery;
-  echo $recipeResult;
-  echo "Hi hannah";
+  
+}
+
+?>
 
 
 
-  while($row = mysqli_fetch_assoc($recipeQuery)) {
+<?php
+  while($row = mysqli_fetch_assoc($result)) {
     ?>
+  
       <div class="item">
         <div class="itembg" style="background-image: url(assets/images/mainimages/<?php echo $row['recipe_img'] ?>.jpg)"></div>
-       
+         
         <div class="itemText">
-          <a href="recipe.php?rec=<?php echo $row['id'] ?>">
+          <a href="recipe.php?rec=<?php echo $row['id']?>">
             <h4><?php echo $row['title'] ?></h4>
+          </a>
           <p><?php echo $row['subtitle'] ?></p>
         </div>
       </div>
-
-    <?php 
+      
+    <?php
   }
-}
 ?>
     
   
