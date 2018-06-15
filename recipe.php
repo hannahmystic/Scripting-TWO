@@ -1,13 +1,14 @@
 <?php
   include "includes/data.php";
-  include "includes/_browseHeader.php";
+  include "includes/_recipeHeader.php";
+  
 
-    if (isset($_GET['rec'])) {
+ if (isset($_GET['rec'])) {
     $id = $_GET['rec']; }
-    $safe_rec = mysqli_real_escape_string($connection, $rec);
+    $safe_rec = mysqli_real_escape_string($connection, $id);
 
 $main = "main"; 
-$mainquery= "SELECT * FROM {$main} WHERE 'id'={$rec}";
+ $mainquery= "SELECT * FROM $main WHERE id=$id";
 $mainresult = mysqli_query($connection, $mainquery);
 
 if (!$mainresult) {
@@ -34,7 +35,7 @@ while ($row = mysqli_fetch_assoc($mainresult)){
     <?php
     }  
         $ing = "ingredients"; 
-        $ingquery= "SELECT * FROM {$ing} WHERE 'foreignkey'={$rec}";
+        $ingquery= "SELECT * FROM $ing WHERE foreignkey=$id";
         $ingresult = mysqli_query($connection, $ingquery);
         
         if (!$ingresult) {
@@ -62,7 +63,7 @@ while ($row = mysqli_fetch_assoc($mainresult)){
 <?php
      
     $dir = "directions"; 
-    $dirquery= "SELECT * FROM {$dir} WHERE 'foreignkey'{$rec}";
+    $dirquery= "SELECT * FROM $dir WHERE foreignkey=$id";
     $dirresult = mysqli_query($connection, $dirquery);
         
     if (!$dirresult) {
@@ -75,7 +76,7 @@ while ($row = mysqli_fetch_assoc($mainresult)){
     <?php while ($row = mysqli_fetch_assoc($dirresult)){ ?>
 
         <div class="recStepBox">
-            <img src="assets/images/ <?php echo $row['image2'] ?>" alt="step image">
+            <img src="assets/images/<?php echo $row['image2']?>.jpg" alt="step image">
             <div class="recStep">
                 <p>
                     <?php echo $row['direction'] ?>

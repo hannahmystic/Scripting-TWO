@@ -43,7 +43,7 @@ else{
   if($numkeys == 0){
     echo "Sorry! There were no results for $tag. Try searching a different term.";
   }
-  else if($numkeys == 1){
+  elseif($numkeys == 1){
     $result = "SELECT * FROM $table WHERE id=$tagkeys[0]";
   }
   else{

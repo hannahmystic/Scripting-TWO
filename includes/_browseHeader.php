@@ -43,7 +43,7 @@
             <a href="browse.php"><h4 id="allRecipes">All Recipes</h4></a>
             <a href="browse.php"><h4 id="browseByCategory"> Browse by Category</h4></a>
             <div class="searchBar">
-                <form action="home.html" method="post" id="myForm" name="myForm">
+                <form action="search.php" method="post" id="myForm" name="myForm">
                     <div class="search">
                         <label for="search"></label>
                         <input type="text" id="search" name="search" placeholder="Search recipes">
